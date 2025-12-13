@@ -1,0 +1,30 @@
+<div class="container text-center carousel-block">
+    <h2 class="fw-bold mb-4">{{title}}</h2>
+
+    <div id="{{id}}" class="carousel slide product-carousel" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+            {{#each slides}}
+            <div class="carousel-item {{#if @first}}active{{/if}}">
+                <div class="row justify-content-center">
+
+                    {{#each this}}
+                    <div class="col-6 col-md-4 col-lg-3 mb-3">
+                        {{> productCard}}
+                    </div>
+                    {{/each}}
+
+                </div>
+            </div>
+            {{/each}}
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#{{id}}" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#{{id}}" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</div>
