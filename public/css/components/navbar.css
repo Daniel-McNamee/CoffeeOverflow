@@ -1,0 +1,203 @@
+/* ------------------- NAVBAR ------------------- */
+.navbar {
+  background-color: var(--color-background);
+  padding: var(--space-3) 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: clamp(1.5rem, 2vw + 1rem, 2.25rem);
+  letter-spacing: -0.015em;
+  color: var(--color-primary);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+}
+
+.navbar-brand img {
+  width: clamp(2.5rem, 3vw + 3.5rem, 8rem);
+  margin-right: var(--space-2);
+}
+
+.navbar-brand:hover {
+  color: #ffffff;
+  transform: scale(1.05);
+  filter:
+    drop-shadow(0 0 4px var(--color-primary))
+    drop-shadow(0 0 12px var(--color-primary))
+    drop-shadow(0 0 24px var(--color-primary))
+    brightness(1.3) contrast(1.2);
+  text-decoration: none;
+}
+
+/* Links */
+.navbar-nav .nav-link {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: clamp(0.9rem, 0.25vw + 0.85rem, 1.1rem);
+  color: var(--color-text);
+  margin-left: var(--space-3);
+  margin-right: var(--space-2);
+  transition: all 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  text-decoration: none;
+  filter:
+    drop-shadow(0 0 4px var(--color-primary))
+    drop-shadow(0 0 12px var(--color-primary))
+    drop-shadow(0 0 24px var(--color-primary));
+  transform: scale(120%);
+}
+
+/* Icons */
+.nav-icons img {
+  height: 3.5rem;
+  width: 3.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.nav-icon img:hover {
+  filter:
+    brightness(0) invert(1)
+    drop-shadow(0 0 4px var(--color-primary))
+    drop-shadow(0 0 12px var(--color-primary))
+    drop-shadow(0 0 24px var(--color-primary));
+  transform: scale(1.15);
+  transition: all 0.3s ease;
+}
+
+/* Flex container for icons */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-left: auto;
+  margin-right: (--space-3);
+}
+
+#nav-icon1 {
+  margin-bottom: 0.2rem;
+}
+
+#nav-icon2 {
+  margin-bottom: 0.25rem;
+}
+
+#nav-icon2 img {
+  height: 3.2rem;
+  width: 3.2rem;
+}
+
+#nav-icon3 {
+  margin-top: 0.15rem;
+  margin-right: 0.2rem;
+}
+
+#nav-icon3 img {
+  height: 4rem;
+  width: 4rem;
+}
+
+.navbar-nav,
+.nav-icons,
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+/* Toggler */
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='%2300ff9d' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+}
+
+.navbar-toggler:hover {
+  filter: drop-shadow(0 0 6px var(--color-primary));
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='%2300ff9d' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+  width: 2rem;
+  height: 2rem;
+}
+
+/* --------------- RESPONSIVENESS ------------------- */
+@media (max-width: 500px) {
+  .nav-icons img {
+    transform: scale(0.75);
+  }
+}
+
+@media (max-width: 1000px) {
+  .navbar-toggler {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-toggler {
+    margin-top: var(--space-2);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .nav-icons {
+    justify-content: center;
+    width: 100%;
+    padding-top: var(--space-2);
+  }
+
+  .container.d-flex {
+    flex-wrap: wrap;
+  }
+
+  .nav-icons {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+    padding-top: var(--space-2);
+    gap: var(--space-3);
+  }
+
+  .navbar-collapse {
+    order: 3;
+    width: 100%;
+  }
+
+  .navbar-toggler {
+    order: 1;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .navbar-brand img {
+    max-width: 80%;
+    height: auto;
+    transform: scale(85%);
+  }
+
+  .navbar-toggler {
+    transform: scale(85%);
+    margin-top: 0.05rem;
+  }
+}
