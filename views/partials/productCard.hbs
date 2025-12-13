@@ -1,0 +1,44 @@
+<!-- DATA ATTRIBUTION -->
+<div
+  class="card h-100 product-card"
+  data-name="{{name}}"
+  data-roast="{{roast}}"
+  data-taste="{{taste}}"
+  data-categories="{{categories}}"
+>
+  <!-- IMAGE -->
+  <a href="/product/{{id}}">
+    <img src="/img/{{img}}" class="card-img-top" alt="{{name}}">
+  </a>
+
+  <div class="card-body">
+    <!-- HEADING -->
+    <h5 class="card-title">
+      <a href="/product/{{id}}" class="text-decoration-none">
+        {{name}}
+      </a>
+    </h5>
+
+    <!-- DESCRIPTION -->
+    {{#if rating}}
+      <p class="mb-1">⭐ {{rating}} ({{reviews}})</p>
+    {{/if}}
+
+    {{#if roast}}
+      <p class="mb-1"><strong>Roast:</strong> {{roast}}</p>
+    {{/if}}
+
+    {{#if taste}}
+      <p class="mb-1"><strong>Taste:</strong> {{taste}}</p>
+    {{/if}}
+
+    <p class="mb-2"><strong>Price:</strong> €{{price}}</p>
+
+    <!-- CTA -->
+    <button
+      class="btn btn-primary w-100 add-to-cart"
+      data-id="{{id}}">
+      Add to Cart
+    </button>
+  </div>
+</div>
