@@ -1,0 +1,25 @@
+/* ------------ Testimonials ---------------- */
+
+.testimonial-card {
+  background-color: #2b2b2b;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: scale(1.05);
+}
+
+.testimonial-card .testimonial-text {
+  font-style: italic;
+  font-size: 1rem;
+}
+
+.testimonials .badge {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
