@@ -1,0 +1,269 @@
+<!-- HERO SECTION -->
+<section class="hero">
+    <video autoplay muted loop playsinline class="hero-video">
+        <source src="/video/B_Roll2.mp4" type="video/mp4" />
+    </video>
+
+    <div class="container h-100">
+        <div class="row h-100 justify-content-center align-items-center text-center">
+            <div class="col-12 col-md-10 col-lg-8 hero-content">
+                <h2>
+                    For coders who prefer dark mode and dark roast.<br>
+                    Debug your mornings, compile your evenings.
+                </h2>
+
+                <p>
+                    Explore Strong Coffee for sprints or Light & Decaf for rest days.<br>
+                    Keep your brain compiling.
+                </p>
+
+                <div class="d-flex justify-content-center gap-3 mt-3">
+                    <button class="cta">Browse Blends</button>
+                    <button class="cta">Learn Our Story</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- MEMBERSHIP SECTION -->
+{{> membership }}
+
+
+<!--      BEST SELLERS         -->
+<div class="container-fluid text-center pt-5 pb-7" id="bg-transition">
+    <h2 class="fw-bold mb-4 text-center">Best Sellers</h2>
+
+    <!-- Small screens : 2 per slide -->
+    <div class="d-block d-md-none">
+        {{> carousel 
+            id="bs-carousel-sm"
+            slides=bestSellerSlides2
+        }}
+    </div>
+
+    <!-- Medium screens : 3 per slide -->
+    <div class="d-none d-md-block d-lg-none">
+        {{> carousel 
+            id="bs-carousel-md"
+            slides=bestSellerSlides3
+        }}
+    </div>
+
+    <!-- Large screens : 4 per slide -->
+    <div class="d-none d-lg-block">
+        {{> carousel 
+            id="bs-carousel-lg"
+            slides=bestSellerSlides4
+        }}
+    </div>
+</div>
+
+
+<!--      NEW ARRIVALS        -->
+<div class="carousel-gradient-wrapper">
+
+    <section>
+        <h2 class="fw-bold mb-4 text-center mt-5">New Arrivals</h2>
+
+        <!-- Small screens -->
+        <div class="d-block d-md-none">
+            {{> carousel 
+                id="na-carousel-sm"
+                slides=newArrivalSlides2
+            }}
+        </div>
+
+        <!-- Medium screens -->
+        <div class="d-none d-md-block d-lg-none">
+            {{> carousel 
+                id="na-carousel-md"
+                slides=newArrivalSlides3
+            }}
+        </div>
+
+        <!-- Large screens -->
+        <div class="d-none d-lg-block">
+            {{> carousel 
+                id="na-carousel-lg"
+                slides=newArrivalSlides4
+            }}
+        </div>
+    </section>
+
+
+    <!--        SEASONAL           -->
+    <section class="container-fluid text-center pt-5 pb-7">
+        <h2 class="fw-bold mb-4 text-center">Seasonal Blends</h2>
+
+        <!-- Small screens -->
+        <div class="d-block d-md-none">
+            {{> carousel 
+                id="seasonal-carousel-sm"
+                slides=seasonalSlides2
+            }}
+        </div>
+
+        <!-- Medium screens -->
+        <div class="d-none d-md-block d-lg-none">
+            {{> carousel 
+                id="seasonal-carousel-md"
+                slides=seasonalSlides3
+            }}
+        </div>
+
+        <!-- Large screens -->
+        <div class="d-none d-lg-block">
+            {{> carousel 
+                id="seasonal-carousel-lg"
+                slides=seasonalSlides4
+            }}
+        </div>
+    </section>
+
+</div>
+
+
+<!-- TESTIMONIALS HEADER -->
+<div class="container-fluid text-center py-7" id="SeasonalTexture">
+    <h3 class="fw-bold mb-4">Excellent</h3>
+
+    <i class="bi bi-star-fill text-warning fs-1"></i>
+    <i class="bi bi-star-fill text-warning fs-1"></i>
+    <i class="bi bi-star-fill text-warning fs-1"></i>
+    <i class="bi bi-star-fill text-warning fs-1"></i>
+    <i class="bi bi-star-half text-warning fs-1"></i>
+
+    <h3 class="fw-bold mb-4">4.5 AVG</h3>
+    <h3 class="fw-bold mb-4">860 Reviews</h3>
+
+    <img src="/img/TrustPilot.png" alt="">
+
+    <!-- TESTIMONIALS CAROUSEL -->
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            {{#each testimonials}}
+            <div class="carousel-item {{#if @first}}active{{/if}}">
+                {{> testimonial 
+                    name=name
+                    verified=verified
+                    stars=stars
+                    text=text
+                    date=date
+                }}
+            </div>
+            {{/each}}
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</div>
+
+
+<section id="Texture">
+    <!-- NEWSLETTER SIGNUP -->
+    {{> newsletter}}
+
+    <!-- VISIT US -->
+    <div class="container my-5 visit-section">
+        <div class="row align-items-center g-4">
+
+            <!-- Image -->
+            <div class="col-md-6">
+                <div class="visit-image-wrapper">
+                    <img src="/img/placeholder.jpg" class="img-fluid rounded visit-image" alt="Coffee Overflow Location">
+                </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-md-6">
+                <h2 class="fw-bold mb-3">Visit Us</h2>
+
+                <div class="visit-details">
+                    <p class="mb-1"><strong>Contact</strong></p>
+                    <p class="mb-1">Phone: +353 123 4567</p>
+                    <p class="mb-3">Email: support@coffeeoverflow.com</p>
+
+                    <p class="mb-1"><strong>Address</strong></p>
+                    <p class="mb-3">Leitrim, Ireland</p>
+
+                    <!-- SOCIAL ICONS -->
+                    <div class="d-flex align-items-center gap-3 mb-3 visit-icons">
+                        <i class="bi bi-twitter"></i>
+                        <i class="bi bi-instagram"></i>
+                        <i class="bi bi-facebook"></i>
+                    </div>
+
+                    <!-- BUTTON -->
+                    <a href="https://maps.google.com" target="_blank" class="btn btn-outline-primary visit-button">
+                        Open in Maps
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- GOOGLE MAPS -->
+        <div class="map-wrapper mt-4">
+            <iframe
+              class="location-map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2413.747983371454!2d-8.002750223498423!3d53.99268427244537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x485ec4fdc1a6b405%3A0xe4c5ab696648efa7!2sLeitrim%20Village%2C%20Co.%20Leitrim!5e0!3m2!1sen!2sie!4v1738510942436!5m2!1sen!2sie"
+              width="600"
+              height="450"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+
+    <!-- CHECK OUT OUR INSTAGRAM -->
+    <div class="instagram-wrapper-outer my-5">
+        <div class="instagram-wrapper-inner p-4 p-md-5">
+
+            <!-- TITLE AND HANDLE-->
+            <h2 class="fw-bold text-center mb-2">CHECK OUT OUR INSTAGRAM</h2>
+            <p class="insta-handle text-center">@coffeeoverflow</p>
+
+            <!-- LOGO AND DESCRIPTION -->
+            <div class="row align-items-center">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <div class="insta-left-content text-center">
+                        <i class="bi bi-instagram insta-big-icon mb-3"></i>
+                        <p class="insta-description">
+                            Follow us for behind the scenes roasting, new blends,
+                            and community highlights.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- IMAGE GRID -->
+                <div class="col-md-8">
+                    <div class="row g-3">
+                        <div class="col-4"><img src="/img/placeholder.jpg" class="insta-img"></div>
+                        <div class="col-4"><img src="/img/placeholder.jpg" class="insta-img"></div>
+                        <div class="col-4"><img src="/img/placeholder.jpg" class="insta-img"></div>
+
+                        <div class="col-4"><img src="/img/placeholder.jpg" class="insta-img"></div>
+                        <div class="col-4"><img src="/img/placeholder.jpg" class="insta-img"></div>
+                        <div class="col-4"><img src="/img/placeholder.jpg" class="insta-img"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="bottom-bg">
+    <!-- FAQ ACCORDION -->
+    {{> faq}}
+</section>
