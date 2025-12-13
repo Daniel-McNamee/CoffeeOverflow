@@ -1,0 +1,55 @@
+/* ---------------- Visit Us Section ---------------- */
+
+/* SECTION */
+.visit-section {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 2.5rem;
+  border-radius: 15px;
+  border: 1px solid rgba(0, 255, 157, 0.15);
+  backdrop-filter: blur(8px);
+}
+
+/* IMAGE */
+.visit-image {
+  border-radius: 12px;
+  width: 100%;
+  object-fit: cover;
+  box-shadow: 0 0 12px rgba(0, 255, 157, 0.25);
+}
+
+/* TEXT */
+.visit-details p {
+  color: #d1d1d1;
+  font-size: 0.95rem;
+}
+
+/* ICONS */
+.visit-icons i {
+  font-size: 1.4rem;
+  color: var(--color-primary);
+  transition: 0.25s ease;
+}
+
+/* ICONS HOVER EFFECT */
+.visit-icons i:hover {
+  text-shadow: 0 0 8px var(--color-primary);
+  transform: scale(1.15);
+}
+
+/* BUTTON */
+.visit-button {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* BUTTON HOVER EFFECT */
+.visit-button:hover {
+  background: var(--color-primary);
+  color: black;
+}
+
+/* MAP */
+.map-wrapper iframe {
+  border-radius: 12px;
+  width: 100%;
+}
