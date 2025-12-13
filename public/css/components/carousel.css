@@ -1,0 +1,110 @@
+/* -------------- Product Carousels ---------------- */
+
+.carousel-gradient-wrapper {
+  background-color: #111111;
+
+  background:
+    linear-gradient(
+      to right,
+      #001612 0%,
+      #041f1a 12%,
+      #153434 30%,
+      #35595af3 70%,
+      #344d4df9 88%,
+      #1c373ad7 100%
+    ),
+    /* VERTICAL FADE MASK (ALPHA) */
+    linear-gradient(
+      to bottom,
+      rgba(17, 17, 17, 1) 0%,
+      rgba(17, 17, 17, 0.9) 30%,
+      rgba(17, 17, 17, 0.8) 40%,
+      rgba(17, 17, 17, 0.7) 50%,
+      rgba(17, 17, 17, 0.6) 60%,
+      rgba(17, 17, 17, 0.5) 70%,
+      rgba(17, 17, 17, 0.4) 80%,
+      rgba(17, 17, 17, 0.2) 90%,
+      rgba(17, 17, 17, 0.1) 95%,
+      rgba(17, 17, 17, 0.05) 97.5%,
+      rgba(17, 17, 17, 0) 100%
+    );
+
+  background-blend-mode: multiply;
+}
+
+/* ---------- Seasonal texture wrapper ---------- */
+#SeasonalTexture {
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(6, 47, 46, 0.35) 0%,
+      rgba(6, 47, 46, 0.05) 40%,
+      rgba(0, 0, 0, 0) 70%
+    ),
+    url("/img/ChristmasBanner.jpg") center/cover no-repeat;
+}
+
+/* -------- Responsive carousel arrows -------- */
+
+/* small screens */
+.product-carousel .carousel-control-prev {
+  left: -4rem;
+}
+
+.product-carousel .carousel-control-next {
+  right: -4rem;
+}
+
+/* Medium screens */
+@media (min-width: 768px) {
+  .product-carousel .carousel-control-prev {
+    left: -5rem;
+  }
+
+  .product-carousel .carousel-control-next {
+    right: -5rem;
+  }
+}
+
+/* Large screens */
+@media (min-width: 992px) {
+  .product-carousel .carousel-control-prev {
+    left: -6rem;
+  }
+
+  .product-carousel .carousel-control-next {
+    right: -6rem;
+  }
+}
+
+@media (min-width: 1124px) {
+  .product-carousel .carousel-control-prev {
+    left: -7.5rem;
+  }
+
+  .product-carousel .carousel-control-next {
+    right: -7.5rem;
+  }
+}
+
+/* Hover glow */
+.product-carousel .carousel-control-prev-icon:hover,
+.product-carousel .carousel-control-next-icon:hover {
+  filter: drop-shadow(0 0 6px var(--color-primary));
+}
+
+/* -------- Cards per slide limits -------- */
+
+/* Medium screens: show only 3 cards per slide */
+@media (min-width: 577px) and (max-width: 991px) {
+  .carousel .carousel-item .col-md-4:nth-child(n+4) {
+    display: none !important;
+  }
+}
+
+/* Small screens: show only 2 cards per slide */
+@media (max-width: 576px) {
+  .carousel .carousel-item .col-6:nth-child(n+3) {
+    display: none !important;
+  }
+}
