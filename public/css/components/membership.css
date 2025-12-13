@@ -1,0 +1,16 @@
+/* Icons */
+.icon-video {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+/* Hover animation */
+.animate-logo {
+  transition: transform 0.3s ease;
+}
+
+.animate-logo:hover {
+  transform: scale(1.3);
+}
