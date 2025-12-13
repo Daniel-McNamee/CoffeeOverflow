@@ -1,0 +1,30 @@
+<div class="card testimonial-card mx-auto text-start p-4" style="max-width: 600px;">
+    <div class="d-flex align-items-center mb-2">
+        <!-- HEADING -->
+        <h5 class="mb-0 me-2">{{name}}</h5>
+
+        <!-- VERIFIED BADGE -->
+        {{#if verified}}
+        <span class="badge bg-success d-flex align-items-center">
+            Verified <i class="bi bi-check-lg ms-1"></i>
+        </span>
+        {{/if}}
+    </div>
+
+    <div class="mb-2">
+        <!-- Star rating -->
+        {{#each stars}}
+            <i class="bi bi-star{{this}} text-warning"></i>
+        {{/each}}
+    </div>
+
+    <!-- TEXT -->
+    <p class="testimonial-text mb-3">
+        "{{text}}"
+    </p>
+
+    <!-- DATE -->
+    <div class="text-end small">
+        {{date}}
+    </div>
+</div>
