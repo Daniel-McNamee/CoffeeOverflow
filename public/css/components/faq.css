@@ -1,0 +1,69 @@
+/* ------------------- FAQ Accordion ------------------ */
+
+.custom-accordion {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.custom-accordion .accordion-item {
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.custom-accordion .accordion-item:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 10px rgba(0, 255, 157, 0.5),
+    0 0 20px rgba(0, 255, 157, 0.35),
+    0 0 30px rgba(0, 255, 157, 0.25);
+}
+
+.custom-accordion .accordion-button {
+  background: transparent;
+  color: var(--color-text);
+  font-weight: 600;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+}
+
+.custom-accordion .accordion-button:not(.collapsed) {
+  background: rgba(0, 255, 157, 0.12);
+  color: var(--color-primary);
+  box-shadow:
+    0 0 10px rgba(0, 255, 157, 0.3),
+    inset 0 0 12px rgba(0, 255, 157, 0.25);
+}
+
+.custom-accordion .accordion-button:focus {
+  box-shadow: none;
+}
+
+.custom-accordion .accordion-button::after {
+  filter: invert(1);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.custom-accordion .accordion-button:not(.collapsed)::after {
+  transform: rotate(180deg);
+}
+
+.custom-accordion .accordion-button:hover::after {
+  filter:
+    invert(1)
+    drop-shadow(0 0 4px var(--color-primary))
+    drop-shadow(0 0 8px var(--color-primary))
+    drop-shadow(0 0 12px var(--color-primary));
+}
+
+.accordion-body {
+  padding: 1rem 1.25rem;
+  font-size: 1.3rem;
+  color: #ffffff;
+  line-height: 1.6;
+}
