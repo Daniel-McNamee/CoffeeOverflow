@@ -1,0 +1,53 @@
+<!-- Container -->
+<section class="container my-5">
+
+  <!-- Title -->
+  <h1 class="mb-4">Your Cart</h1>
+
+  <!-- Empty Message -->
+  <div id="emptyCart" class="alert alert-info d-none">
+    Your cart is currently empty.
+  </div>
+
+  <!-- Cart Table -->
+  <div class="table-responsive">
+    <table class="table align-middle">
+
+      <!-- Table Head -->
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th style="width: 140px;">Quantity</th>
+          <th>Price</th>
+          <th>Total</th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <!-- Table Body -->
+      <tbody id="cartItems">
+        <!-- Items Added Using JS -->
+      </tbody>
+
+    </table>
+  </div>
+
+  <!-- Cart Summary -->
+  <div class="d-flex justify-content-end mt-4">
+    <div class="text-end">
+
+      <!-- Total -->
+      <h4>Total: €<span id="cartTotal">0.00</span></h4>
+
+      <!-- Checkout Button -->
+      <a href="/checkout" class="btn btn-primary mt-3">
+        Proceed to Checkout
+      </a>
+
+    </div>
+  </div>
+
+</section>
+
+<!-- Script -->
+<script src="/js/cart-page.js"></script>
