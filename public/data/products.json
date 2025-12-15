@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Ctrl Alt Delight",
     "img": "Product.jpg",
-    "rating": 4,
+    "rating": 4.5,
     "reviews": 23,
     "roast": "Medium",
     "taste": "Chocolate",
@@ -25,7 +25,7 @@
     "id": 3,
     "name": "Bug Fix Brew",
     "img": "Product.jpg",
-    "rating": 5,
+    "rating": 4.5,
     "reviews": 23,
     "roast": "Light",
     "taste": "Fruity",
@@ -57,7 +57,7 @@
   {
     "id": 6,
     "name": "Patch Notes Pumpkin Spice",
-    "img": "Product.jpg",
+    "img": "FestiveProduct.png",
     "rating": 4.5,
     "reviews": 23,
     "roast": "Dark",
@@ -113,7 +113,7 @@
     "id": 11,
     "name": "Infinite Loop Espresso",
     "img": "Product.jpg",
-    "rating": 3.6,
+    "rating": 4.6,
     "reviews": 198,
     "roast": "Dark",
     "taste": "Dark Chocolate & Smoky",
@@ -255,7 +255,7 @@
   {
     "id": 24,
     "name": "Santa's Syntax Spice",
-    "img": "Product.jpg",
+    "img": "FestiveProduct.png",
     "rating": 4.6,
     "reviews": 112,
     "roast": "Dark",
@@ -266,7 +266,7 @@
   {
     "id": 25,
     "name": "Holiday Hotfix Hazelnut",
-    "img": "Product.jpg",
+    "img": "FestiveProduct.png",
     "rating": 4.4,
     "reviews": 87,
     "roast": "Medium",
@@ -277,7 +277,7 @@
   {
     "id": 26,
     "name": "Frostbyte Mint Mocha",
-    "img": "Product.jpg",
+    "img": "FestiveProduct.png",
     "rating": 4.8,
     "reviews": 204,
     "roast": "Light-Medium",
@@ -288,7 +288,7 @@
   {
     "id": 27,
     "name": "Winter Loop Latte",
-    "img": "Product.jpg",
+    "img": "FestiveProduct.png",
     "rating": 4.5,
     "reviews": 95,
     "roast": "Light",
@@ -299,8 +299,8 @@
   {
     "id": 28,
     "name": "Debug the Halls",
-    "img": "Product.jpg",
-    "rating": 3.8,
+    "img": "FestiveProduct.png",
+    "rating": 4.6,
     "reviews": 131,
     "roast": "Dark",
     "taste": "Festive Spice Espresso",
@@ -310,7 +310,7 @@
   {
     "id": 29,
     "name": "Chestnut Compile Roast",
-    "img": "Product.jpg",
+    "img": "FestiveProduct.png",
     "rating": 4.7,
     "reviews": 189,
     "roast": "Medium-Dark",
@@ -321,7 +321,7 @@
   {
     "id": 30,
     "name": "Elf Mode Espresso",
-    "img": "Product.jpg",
+    "img": "FestiveProduct.png",
     "rating": 4.5,
     "reviews": 103,
     "roast": "Ultra Strong",
@@ -332,8 +332,8 @@
   {
     "id": 31,
     "name": "Yule Log Latte",
-    "img": "Product.jpg",
-    "rating": 4.9,
+    "img": "FestiveProduct.png",
+    "rating": 4.4,
     "reviews": 92,
     "roast": "Medium-Dark",
     "taste": "Chocolate, Smoke & Vanilla",
@@ -341,3 +341,4 @@
     "categories": ["New", "Seasonal / Limited Edition", "Strong Coffee", "All Blends"]
   }
 ]
+
