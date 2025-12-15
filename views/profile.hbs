@@ -1,0 +1,102 @@
+<!-- Container -->
+<section class="container my-5" style="max-width: 700px;">
+
+  <!-- Title -->
+  <h1>My Profile</h1>
+
+  <!-- Layout -->
+  <div class="row g-4 mt-4">
+
+    <!-- Details -->
+    <div class="col-12 col-md-6">
+
+      <!-- Personal -->
+      <h4>Personal Details</h4>
+
+      <!-- Profile Form -->
+      <form id="profileForm">
+
+        <!-- Email -->
+        <div class="mb-3">
+          <label for="profileEmail" class="form-label">Email</label>
+          <input
+            id="profileEmail"
+            type="email"
+            class="form-control"
+            disabled>
+        </div>
+
+        <!-- Address -->
+        <div class="mb-3">
+          <label for="profileAddress" class="form-label">Delivery Address</label>
+          <textarea
+            id="profileAddress"
+            name="address"
+            class="form-control"
+            rows="3"
+            required
+            minlength="10"
+            maxlength="200"></textarea>
+        </div>
+
+        <!-- Save -->
+        <button class="btn btn-primary w-100">
+          Save Details
+        </button>
+
+        <!-- Saved Message -->
+        <div id="profileSaved" class="alert alert-success d-none mt-3">
+          Profile updated successfully.
+        </div>
+
+      </form>
+    </div>
+
+    <!-- Security -->
+    <div class="col-12 col-md-6">
+
+      <!-- Password -->
+      <h4>Security</h4>
+
+      <!-- Password Form -->
+      <form id="passwordForm">
+
+        <!-- New Password -->
+        <div class="mb-3">
+          <label for="newPassword" class="form-label">New Password</label>
+          <input
+            id="newPassword"
+            name="newPassword"
+            type="password"
+            class="form-control"
+            required
+            minlength="6">
+        </div>
+
+        <!-- Change -->
+        <button class="btn btn-outline-secondary w-100">
+          Change Password
+        </button>
+
+        <!-- Saved Message -->
+        <div id="passwordSaved" class="alert alert-success d-none mt-3">
+          Password updated successfully.
+        </div>
+
+      </form>
+
+      <!-- Divider -->
+      <hr class="my-4">
+
+      <!-- Payment -->
+      <h5>Saved Payment</h5>
+      <p id="paymentInfo">
+        No payment details saved.
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<!-- Script -->
+<script src="/js/profile.js"></script>
