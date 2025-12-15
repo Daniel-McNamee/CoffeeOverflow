@@ -1,0 +1,43 @@
+<!-- Container -->
+<section class="container my-5">
+
+  <!-- Layout -->
+  <div class="row g-4">
+
+    <!-- Product Image -->
+    <div class="col-12 col-lg-6">
+      <img src="/img/{{product.img}}" class="img-fluid" alt="{{product.name}}">
+    </div>
+
+    <!-- Product Info -->
+    <div class="col-12 col-lg-6">
+
+      <!-- Name -->
+      <h1>{{product.name}}</h1>
+
+      <!-- Rating -->
+      <p>⭐ {{product.rating}} ({{product.reviews}} reviews)</p>
+
+      <!-- Details -->
+      <p><strong>Roast:</strong> {{product.roast}}</p>
+      <p><strong>Taste:</strong> {{product.taste}}</p>
+
+      <!-- Price -->
+      <p class="fs-4 fw-bold">€{{product.price}}</p>
+
+      <!-- Quantity -->
+      <div class="mb-3">
+        <label for="qty" class="form-label">Quantity</label>
+        <input id="qty" type="number" min="1" value="1" class="form-control w-25">
+      </div>
+
+      <!-- Add Button -->
+      <button
+        class="btn btn-primary w-100 add-to-cart"
+        data-id="{{id}}">
+        Add to Cart
+      </button>
+
+    </div>
+  </div>
+</section>
