@@ -1,0 +1,51 @@
+<!-- Container -->
+<section class="container my-5">
+
+  <!-- Title -->
+  <h1 class="mb-4">Shop Coffee</h1>
+
+  <!-- Filters -->
+  <div class="row mb-4 g-3 align-items-end">
+
+    <!-- Search -->
+    <div class="col-12 col-md-6">
+      <label for="searchInput" class="form-label">Search</label>
+      <input
+        id="searchInput"
+        type="search"
+        class="form-control"
+        placeholder="Search by name, roast or taste">
+    </div>
+
+    <!-- Category -->
+    <div class="col-12 col-md-4">
+      <label for="categoryFilter" class="form-label">Category</label>
+      <select id="categoryFilter" class="form-select">
+        <option value="all">All Categories</option>
+        <option value="Best Seller">Best Sellers</option>
+        <option value="New">New</option>
+        <option value="Strong Coffee">Strong Coffee</option>
+        <option value="Light & Decaf">Light & Decaf</option>
+        <option value="Seasonal / Limited Edition">Seasonal / Limited Edition</option>
+      </select>
+    </div>
+
+  </div>
+
+  <!-- Products -->
+  <div class="row g-4">
+
+    {{#each products}}
+      <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+
+        <!-- Product Card -->
+        {{> productCard this}}
+
+      </div>
+    {{/each}}
+
+  </div>
+</section>
+
+<!-- Script -->
+<script src="/js/shop.js"></script>
