@@ -1,0 +1,50 @@
+<!-- Container -->
+<section class="container my-5" style="max-width: 400px;">
+
+  <!-- Title -->
+  <h1>Login</h1>
+
+  <!-- Login Form -->
+  <form onsubmit="handleLogin(event)">
+
+    <!-- Error -->
+    <div id="loginError" class="alert alert-danger d-none">
+      Invalid username or password
+    </div>
+
+    <!-- Username -->
+    <div class="mb-3">
+      <label for="username" class="form-label">Username</label>
+      <input
+        id="username"
+        name="username"
+        type="text"
+        class="form-control"
+        required
+        minlength="3"
+        value="admin">
+    </div>
+
+    <!-- Password -->
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input
+        id="password"
+        name="password"
+        type="password"
+        class="form-control"
+        required
+        minlength="6"
+        value="coffee123">
+    </div>
+
+    <!-- Submit -->
+    <button class="btn btn-primary w-100">Login</button>
+
+    <!-- Register Link -->
+    <p class="mt-3 text-center">
+      <a href="/register">Create an account</a>
+    </p>
+
+  </form>
+</section>
