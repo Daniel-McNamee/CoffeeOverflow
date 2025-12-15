@@ -1,0 +1,53 @@
+<!-- Container -->
+<section class="container my-5" style="max-width: 400px;">
+
+  <!-- Title -->
+  <h1>Register</h1>
+
+  <!-- Registration Form -->
+  <form onsubmit="handleRegister(event)">
+
+    <!-- Username -->
+    <div class="mb-3">
+      <label for="regUser" class="form-label">Username</label>
+      <input
+        id="regUser"
+        name="username"
+        type="text"
+        class="form-control"
+        required
+        minlength="3"
+        maxlength="20">
+    </div>
+
+    <!-- Email -->
+    <div class="mb-3">
+      <label for="regEmail" class="form-label">Email</label>
+      <input
+        id="regEmail"
+        name="email"
+        type="email"
+        class="form-control"
+        required>
+    </div>
+
+    <!-- Password -->
+    <div class="mb-3">
+      <label for="regPass" class="form-label">Password</label>
+      <input
+        id="regPass"
+        name="password"
+        type="password"
+        class="form-control"
+        required
+        minlength="6"
+        title="Password must be at least 6 characters long">
+    </div>
+
+    <!-- Submit -->
+    <button class="btn btn-primary w-100">
+      Create Account
+    </button>
+
+  </form>
+</section>
