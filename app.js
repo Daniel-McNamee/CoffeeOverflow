@@ -52,6 +52,13 @@ const testimonials = [
         stars: ["-fill", "-fill", "-fill", "-fill", "-fill"],
         text: "Dark Mode Roast is my go-to for late-night coding.",
         date: "5 days ago"
+    },
+    {
+        name: "Alter",
+        verified: true,
+        stars: ["-fill", "-fill", "-fill", "-fill", "-fill"],
+        text: "Dark Mode Roast is my go-to for late-night coding.",
+        date: "5 days ago"
     }
 ];
 
@@ -96,8 +103,12 @@ app.get("/", (req, res) => {
 });
 
 app.get("/shop", (req, res) => {
-    res.render("shop", { products });
+    res.render("shop", {
+        products,
+        isShop: true
+    });
 });
+
 
 app.get("/product/:id", (req, res) => {
     const product = products.find(p => p.id == req.params.id);
@@ -105,17 +116,60 @@ app.get("/product/:id", (req, res) => {
     res.render("product", { product });
 });
 
-app.get("/membership", (req, res) => res.render("membership"));
+app.get("/membership", (req, res) => {
+    res.render("membership", {
+        isMembership: true,
+    });
+});
 
-app.get("/about", (req, res) => res.render("about"));
-app.get("/contact", (req, res) => res.render("contact"));
+app.get("/membership-checkout", (req, res) => {
+    res.render("membership-checkout", {
+        isMembershipCheckout: true,
+    });
+});
 
-app.get("/login", (req, res) => res.render("login"));
-app.get("/register", (req, res) => res.render("register"));
-app.get("/profile", (req, res) => res.render("profile"));
+app.get("/about", (req, res) => {
+    res.render("about", {
+        isAbout: true,
+        testimonials
+    });
+});
 
-app.get("/cart", (req, res) => res.render("cart"));
-app.get("/checkout", (req, res) => res.render("checkout"));
+app.get("/contact", (req, res) => {
+    res.render("contact", {
+        isContact: true
+    });
+});
+
+app.get("/login", (req, res) => {
+    res.render("login", {
+        isLogin: true
+    });
+});
+
+app.get("/register", (req, res) => {
+    res.render("register", {
+        isRegister: true
+    });
+});
+
+app.get("/profile", (req, res) => {
+    res.render("profile", {
+        isProfile: true
+    });
+});
+
+app.get("/cart", (req, res) => {
+    res.render("cart", {
+        isCart: true
+    });
+});
+
+app.get("/checkout", (req, res) => {
+    res.render("checkout", {
+        isCheckout: true
+    });
+});
 
 
 // ------------ SERVER -----------
