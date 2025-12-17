@@ -1,107 +1,124 @@
-<!-- Container -->
-<section class="container my-5" style="max-width: 600px;">
+<!-- CHECKOUT PAGE -->
+<section class="checkout-page">
 
-  <!-- Title -->
-  <h1>Checkout</h1>
+  <div class="checkout-card">
 
-  <!-- Checkout Form -->
-  <form id="checkoutForm">
-
-    <!-- Address -->
-    <h4 class="mt-4">Delivery Address</h4>
-    <div class="mb-3">
-      <label for="address" class="form-label">Address</label>
-      <textarea
-        id="address"
-        name="address"
-        class="form-control"
-        rows="3"
-        required
-        minlength="10"
-        maxlength="200"></textarea>
+    <!-- HEADER -->
+    <div class="checkout-header">
+      <h1>Checkout</h1>
+      <p class="checkout-subtitle">
+        Almost there, your coffee is just a few keystrokes away ☕
+      </p>
     </div>
 
-    <!-- Payment -->
-    <h4 class="mt-4">Payment Details</h4>
+    <!-- FORM -->
+    <form id="checkoutForm" novalidate>
 
-    <!-- Card Name -->
-    <div class="mb-3">
-      <label for="cardName" class="form-label">Name on Card</label>
-      <input
-        id="cardName"
-        name="cardName"
-        type="text"
-        class="form-control"
-        required
-        minlength="3">
-    </div>
+      <!-- ADDRESS -->
+      <div class="checkout-section">
+        <h4>Delivery Address</h4>
+        <p class="checkout-hint">
+          Where should we send the good stuff?
+        </p>
 
-    <!-- Card Number -->
-    <div class="mb-3">
-      <label for="cardNumber" class="form-label">Card Number</label>
-      <input
-        id="cardNumber"
-        name="cardNumber"
-        class="form-control"
-        placeholder="4242 4242 4242 4242"
-        required
-        inputmode="numeric"
-        pattern="\d{16}"
-        title="Card number must be exactly 16 digits">
-    </div>
-
-    <!-- Expiry + CVC -->
-    <div class="row">
-
-      <!-- Expiry -->
-      <div class="col-6 mb-3">
-        <label for="expiry" class="form-label">Expiry</label>
-        <input
-          id="expiry"
-          name="expiry"
+        <textarea
+          id="address"
+          name="address"
           class="form-control"
-          placeholder="MM/YY"
+          rows="3"
           required
-          pattern="^(0[1-9]|1[0-2])\/\d{2}$"
-          title="Expiry date must be in MM/YY format">
+          minlength="10"
+          maxlength="200"
+          placeholder="Street, town, county…"></textarea>
       </div>
 
-      <!-- CVC -->
-      <div class="col-6 mb-3">
-        <label for="cvc" class="form-label">CVC</label>
-        <input
-          id="cvc"
-          name="cvc"
-          class="form-control"
-          placeholder="123"
-          required
-          inputmode="numeric"
-          pattern="\d{3}"
-          maxlength="3"
-          title="CVC must be exactly 3 digits">
+      <!-- PAYMENT -->
+      <div class="checkout-section">
+        <h4>Payment Details</h4>
+        <p class="checkout-hint">
+          Secure, encrypted, and developer approved.
+        </p>
+
+        <!-- NAME -->
+        <div class="mb-3">
+          <label for="cardName" class="form-label">Name on Card</label>
+          <input
+            id="cardName"
+            name="cardName"
+            type="text"
+            class="form-control"
+            required
+            minlength="3"
+            placeholder="Ada Lovelace">
+        </div>
+
+        <!-- CARD NUMBER -->
+        <div class="mb-3">
+          <label for="cardNumber" class="form-label">Card Number</label>
+          <input
+            id="cardNumber"
+            name="cardNumber"
+            class="form-control"
+            placeholder="4242 4242 4242 4242"
+            required
+            inputmode="numeric"
+            pattern="\d{16}"
+            title="Card number must be exactly 16 digits">
+          <small class="form-text">
+            Nice card number 😄 We promise we won't memorise it.
+          </small>
+        </div>
+
+        <!-- EXPIRY + CVC -->
+        <div class="row">
+          <div class="col-6 mb-3">
+            <label for="expiry" class="form-label">Expiry</label>
+            <input
+              id="expiry"
+              name="expiry"
+              class="form-control"
+              placeholder="MM/YY"
+              required
+              pattern="^(0[1-9]|1[0-2])\/\d{2}$">
+          </div>
+
+          <div class="col-6 mb-3">
+            <label for="cvc" class="form-label">CVC</label>
+            <input
+              id="cvc"
+              name="cvc"
+              class="form-control"
+              placeholder="123"
+              required
+              inputmode="numeric"
+              pattern="\d{3}"
+              maxlength="3">
+          </div>
+        </div>
       </div>
 
+      <!-- ERROR -->
+      <div id="checkoutError" class="alert alert-danger d-none">
+        Something looks off, double check your details and try again.
+      </div>
+
+      <!-- SUBMIT -->
+      <button class="checkout-submit">
+        Submit Payment
+      </button>
+
+    </form>
+
+    <!-- SUCCESS -->
+    <div id="checkoutSuccess" class="checkout-success d-none">
+      <h4>Payment successful 🎉</h4>
+      <p>
+        Your coffee is being prepared.  
+        The kettle's already on.
+      </p>
     </div>
 
-    <!-- Error -->
-    <div id="checkoutError" class="alert alert-danger d-none">
-      Please enter valid payment details.
-    </div>
-
-    <!-- Submit -->
-    <button class="btn btn-success btn-lg w-100 mt-4">
-      Submit Payment
-    </button>
-
-  </form>
-
-  <!-- Success -->
-  <div id="checkoutSuccess" class="alert alert-success d-none mt-4">
-    <h4>Thank you for your order!</h4>
-    <p>Your coffee is being prepared ☕</p>
   </div>
-
 </section>
 
-<!-- Script -->
 <script src="/js/checkout.js"></script>
