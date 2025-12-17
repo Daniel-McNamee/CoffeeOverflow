@@ -1,0 +1,114 @@
+<!-- MEMBERSHIP CHECKOUT -->
+<section class="membership-checkout">
+
+  <div class="membership-checkout-card">
+
+    <!-- Intro -->
+    <div class="membership-checkout-header">
+      <h1>Join the Coffee Overflow Team</h1>
+      <p class="muted">
+        You're one step away from better coffee, better perks,
+        and a community that actually gets it.
+      </p>
+    </div>
+
+    <!-- Plan Summary -->
+    <div class="membership-plan-card">
+      <h3>Monthly Membership</h3>
+      <p class="membership-price">€4.99 <span>/ month</span></p>
+
+      <ul class="membership-perks">
+        <li>☕ 10% off every order</li>
+        <li>🚚 Free deliveries</li>
+        <li>🎁 Free mug, beanie & tote bag</li>
+        <li>🧑‍💻 Access to the Coffee Overflow community</li>
+      </ul>
+
+      <p class="membership-note muted">
+        Cancel anytime. No contracts. No nonsense.
+      </p>
+    </div>
+
+    <!-- Payment -->
+    <form id="membershipCheckoutForm" class="membership-form">
+
+      <h4>Payment Details</h4>
+
+      <!-- Name -->
+      <div class="form-group">
+        <label for="cardName">Name on Card</label>
+        <input
+          id="cardName"
+          type="text"
+          class="form-control"
+          placeholder="Ada Lovelace"
+          required
+        >
+        <small class="form-hint muted">
+          The name your bank expects, sadly nicknames don't work here.
+        </small>
+      </div>
+
+      <!-- Card Number -->
+      <div class="form-group">
+        <label for="cardNumber">Card Number</label>
+        <input
+          id="cardNumber"
+          type="text"
+          class="form-control"
+          placeholder="4242 4242 4242 4242"
+          inputmode="numeric"
+          required
+        >
+        <small class="form-hint muted">
+          Nice card number 😄 We promise we won't memorise it.
+        </small>
+      </div>
+
+      <!-- Expiry + CVC -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="expiry">Expiry</label>
+          <input
+            id="expiry"
+            type="text"
+            class="form-control"
+            placeholder="MM/YY"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="cvc">CVC</label>
+          <input
+            id="cvc"
+            type="text"
+            class="form-control"
+            placeholder="123"
+            inputmode="numeric"
+            required
+          >
+        </div>
+      </div>
+
+      <!-- Error -->
+      <div id="membershipError" class="alert alert-danger d-none">
+        Something went wrong. Please double check your details.
+      </div>
+
+      <!-- CTA -->
+      <button class="membership-cta">
+        Join the Team
+      </button>
+
+      <p class="secure-note muted">
+        🔒 Secure payment · You'll be charged €4.99 monthly
+      </p>
+
+    </form>
+
+  </div>
+
+</section>
+
+<script src="/js/membership-checkout.js"></script>
