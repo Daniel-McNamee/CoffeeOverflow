@@ -1,50 +1,69 @@
-<!-- Container -->
-<section class="container my-5" style="max-width: 400px;">
+<!-- LOGIN PAGE -->
+<section class="login-page">
 
-  <!-- Title -->
-  <h1>Login</h1>
+  <div class="login-wrapper">
 
-  <!-- Login Form -->
-  <form onsubmit="handleLogin(event)">
+    <div class="login-card">
 
-    <!-- Error -->
-    <div id="loginError" class="alert alert-danger d-none">
-      Invalid username or password
+      <!-- Header -->
+      <div class="login-header">
+        <h2>Welcome Back</h1>
+        <p class="login-subtext">
+          Log in to continue brewing ideas ☕
+        </p>
+      </div>
+
+      <!-- Login Form -->
+      <form onsubmit="handleLogin(event)" novalidate>
+
+        <!-- Error -->
+        <div id="loginError" class="alert alert-danger d-none">
+          Invalid username or password
+        </div>
+
+        <!-- Username -->
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
+          <input
+            id="username"
+            name="username"
+            type="text"
+            class="form-control"
+            required
+            minlength="3"
+            placeholder="your_username"
+            value="admin">
+        </div>
+
+        <!-- Password -->
+        <div class="mb-4">
+          <label for="password" class="form-label">Password</label>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            class="form-control"
+            required
+            minlength="6"
+            placeholder="••••••••"
+            value="coffee123">
+        </div>
+
+        <!-- Submit -->
+        <button class="btn btn-primary w-100 login-btn">
+          Login
+        </button>
+
+        <!-- Footer -->
+        <p class="login-footer">
+          New here?
+          <a href="/register">Create an account</a>
+        </p>
+
+      </form>
+
     </div>
 
-    <!-- Username -->
-    <div class="mb-3">
-      <label for="username" class="form-label">Username</label>
-      <input
-        id="username"
-        name="username"
-        type="text"
-        class="form-control"
-        required
-        minlength="3"
-        value="admin">
-    </div>
+  </div>
 
-    <!-- Password -->
-    <div class="mb-3">
-      <label for="password" class="form-label">Password</label>
-      <input
-        id="password"
-        name="password"
-        type="password"
-        class="form-control"
-        required
-        minlength="6"
-        value="coffee123">
-    </div>
-
-    <!-- Submit -->
-    <button class="btn btn-primary w-100">Login</button>
-
-    <!-- Register Link -->
-    <p class="mt-3 text-center">
-      <a href="/register">Create an account</a>
-    </p>
-
-  </form>
 </section>
