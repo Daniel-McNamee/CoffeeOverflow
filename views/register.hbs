@@ -1,53 +1,78 @@
-<!-- Container -->
-<section class="container my-5" style="max-width: 400px;">
+<!-- REGISTER PAGE -->
+<section class="register-page">
 
-  <!-- Title -->
-  <h1>Register</h1>
+  <div class="register-wrapper">
 
-  <!-- Registration Form -->
-  <form onsubmit="handleRegister(event)">
+    <div class="register-card">
 
-    <!-- Username -->
-    <div class="mb-3">
-      <label for="regUser" class="form-label">Username</label>
-      <input
-        id="regUser"
-        name="username"
-        type="text"
-        class="form-control"
-        required
-        minlength="3"
-        maxlength="20">
+      <!-- Header -->
+      <div class="register-header">
+        <h2>Join Coffee Overflow</h1>
+        <p class="register-subtext">
+          Create an account and start brewing better code ☕
+        </p>
+      </div>
+
+      <!-- Registration Form -->
+      <form onsubmit="handleRegister(event)" novalidate>
+
+        <!-- Username -->
+        <div class="mb-3">
+          <label for="regUser" class="form-label">Username</label>
+          <input
+            id="regUser"
+            name="username"
+            type="text"
+            class="form-control"
+            required
+            minlength="3"
+            maxlength="20"
+            placeholder="dev_handle">
+        </div>
+
+        <!-- Email -->
+        <div class="mb-3">
+          <label for="regEmail" class="form-label">Email</label>
+          <input
+            id="regEmail"
+            name="email"
+            type="email"
+            class="form-control"
+            required
+            placeholder="you@debugging.com">
+        </div>
+
+        <!-- Password -->
+        <div class="mb-4">
+          <label for="regPass" class="form-label">Password</label>
+          <input
+            id="regPass"
+            name="password"
+            type="password"
+            class="form-control"
+            required
+            minlength="6"
+            placeholder="at least 6 characters">
+          <small class="register-hint">
+            Tip: a strong password fixes bugs before they happen.
+          </small>
+        </div>
+
+        <!-- Submit -->
+        <button class="btn btn-primary w-100 register-btn">
+          Create Account
+        </button>
+
+        <!-- Footer -->
+        <p class="register-footer">
+          Already have an account?
+          <a href="/login">Log in</a>
+        </p>
+
+      </form>
+
     </div>
 
-    <!-- Email -->
-    <div class="mb-3">
-      <label for="regEmail" class="form-label">Email</label>
-      <input
-        id="regEmail"
-        name="email"
-        type="email"
-        class="form-control"
-        required>
-    </div>
+  </div>
 
-    <!-- Password -->
-    <div class="mb-3">
-      <label for="regPass" class="form-label">Password</label>
-      <input
-        id="regPass"
-        name="password"
-        type="password"
-        class="form-control"
-        required
-        minlength="6"
-        title="Password must be at least 6 characters long">
-    </div>
-
-    <!-- Submit -->
-    <button class="btn btn-primary w-100">
-      Create Account
-    </button>
-
-  </form>
 </section>
