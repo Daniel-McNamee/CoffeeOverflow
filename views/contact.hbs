@@ -1,49 +1,74 @@
-<!-- Container -->
-<section class="container my-5">
+<!-- CONTACT PAGE -->
+<section class="contact-page" id="contactTexture">
 
-  <!-- Title -->
-  <h1>Contact Us</h1>
+  <div class="contact-wrapper">
 
-  <!-- Address -->
-  <p class="mt-3">
-    Coffee Overflow<br>
-    Main Street<br>
-    Leitrim Village<br>
-    Leitrim, Ireland
-  </p>
-
-  <!-- Contact Form -->
-  <form class="mt-4">
-
-    <!-- Email Field -->
-    <div class="mb-3">
-      <label class="form-label" for="contactEmail">Your Email</label>
-      <input
-        id="contactEmail"
-        name="email"
-        type="email"
-        class="form-control"
-        required>
+    <!-- Header -->
+    <div class="contact-header">
+      <h1>Contact Us</h1>
+      <p class="contact-subtitle">
+        Got a question, idea, or just want to say hi?<br>
+        Drop us a message. We're friendly, promise.
+      </p>
     </div>
 
-    <!-- Message Field -->
-    <div class="mb-3">
-      <label class="form-label" for="contactMessage">Message</label>
-      <textarea
-        id="contactMessage"
-        name="message"
-        class="form-control"
-        rows="4"
-        required
-        minlength="10"
-        maxlength="500"></textarea>
+    <!-- Main Content -->
+    <div class="contact-content">
+
+      <!-- Address Card -->
+      <div class="contact-card contact-details">
+        <h3>Where to find us</h3>
+        <p>
+          Coffee Overflow<br>
+          Main Street<br>
+          Leitrim Village<br>
+          Leitrim, Ireland
+        </p>
+
+        <p class="contact-note muted">
+          Developers welcome. Laptops encouraged.
+        </p>
+      </div>
+
+      <!-- Form Card -->
+      <div class="contact-card contact-form-card">
+        <form>
+
+          <div class="mb-4">
+            <label class="form-label" for="contactEmail">Your Email</label>
+            <input
+              id="contactEmail"
+              name="email"
+              type="email"
+              class="form-control"
+              placeholder="you@debugging.com"
+              required>
+          </div>
+
+          <div class="mb-4">
+            <label class="form-label" for="contactMessage">Message</label>
+            <textarea
+              id="contactMessage"
+              name="message"
+              class="form-control"
+              rows="5"
+              placeholder="What's on your mind?"
+              required
+              minlength="10"
+              maxlength="500"></textarea>
+          </div>
+
+          <button class="btn contact-submit">
+            Send Message
+          </button>
+
+        </form>
+      </div>
+
     </div>
 
-    <!-- Submit Button -->
-    <button class="btn btn-primary">Send Message</button>
+  </div>
 
-  </form>
 </section>
 
-<!-- Script -->
 <script src="/js/contact.js"></script>
