@@ -1,46 +1,180 @@
-<!-- Container -->
-<section class="container my-5">
+<!-- ABOUT PAGE WRAPPER -->
+<section class="about-page" id="aboutTexture">
 
-  <!-- Title -->
-  <h1>About Coffee Overflow</h1>
+  <!-- INTRO -->
+  <div class="about-intro">
+    <div class="about-intro-panel">
+      <div class="about-summary-points">
+        <span class="about-points">Built for devs</span>
+        <span class="about-points">Premium coffee</span>
+        <span class="about-points">Zero corporate vibes</span>
+      </div>
 
-  <!-- Intro -->
-  <p class="mt-4">
-    Coffee Overflow was created for developers who live in code editors,
-    terminal windows, and long debugging sessions.
-  </p>
+      <h1>About Coffee Overflow</h1>
 
-  <!-- Belief -->
-  <p>
-    We believe great coffee fuels great ideas. Every blend we sell is carefully
-    selected and roasted to support focus, clarity, and productivity.
-  </p>
+      <p>
+        Coffee Overflow is built for developers who live in terminals, dark mode editors,
+        and long problem-solving sessions.
+      </p>
 
-  <!-- Divider -->
-  <hr class="my-5">
+      <p>
+        We believe great coffee supports great focus. Every blend is selected to help you stay sharp —
+        whether you're debugging at midnight or pairing over a fresh idea.
+      </p>
 
-  <!-- Mission -->
-  <h3>Our Mission</h3>
-  <p>
-    Our mission is simple: deliver high-quality coffee to people who build
-    the digital world. Whether you're pushing commits at midnight or
-    preparing for a big release, Coffee Overflow is there with you.
-  </p>
+      <p class="about-punchline">
+        Bugs are easier to fix when the mug is full.
+      </p>
+    </div>
+  </div>
 
-  <!-- Location -->
-  <h3 class="mt-4">Where We’re Based</h3>
-  <p>
-    We are proudly based in Ireland and serve customers across Europe.
-    All prices are listed in Euro (€).
-  </p>
 
-  <!-- Features -->
-  <h3 class="mt-4">Why Coffee Overflow?</h3>
-  <ul>
-    <li>Developer-inspired blends</li>
-    <li>Ethically sourced beans</li>
-    <li>Fast delivery across the EU</li>
-    <li>Designed with usability and accessibility in mind</li>
-  </ul>
+  <!-- FUN STRIP -->
+  <div class="about-highlight-panel">
+    <div class="about-highlight-panel-inner">
+      <h3>Built for late nights, early mornings, and “just one more commit.”</h3>
+      <p>
+        If you've ever said “I'll sleep after I ship it” - Welcome Home.
+      </p>
+    </div>
+  </div>
+
+
+  <!-- CODE CAFE -->
+  <div class="about-cafe container">
+    <div class="row align-items-center g-5">
+
+      <div class="col-lg-7">
+        <div class="about-cafe-image">
+          <img src="/img/visit-us-cafe.png" alt="Developers working in Coffee Overflow Leitrim Village" />
+          <div class="about-cafe-image-tag">
+            <span>Leitrim Village</span>
+            <span>Code Cafe</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="about-cafe-card">
+          <h2>Leitrim Village Code Cafe</h2>
+
+          <p>
+            Based in Leitrim Village, Coffee Overflow is more than a coffee shop,
+            it's a space built for developers.
+          </p>
+
+          <p>
+            Our cafe is a hub where coders meet, collaborate, or quietly smash out a few hours of focused work.
+            Laptops are welcome. Conversations are encouraged. Good coffee is guaranteed.
+          </p>
+
+          <p class="about-highlight">
+            Expect open laptops, warm lights, and the occasional rubber duck debugging a tough problem.
+          </p>
+
+          <p class="about-highlight2">
+            We're not just serving coffee. We're building a place where developers belong.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- MINI GALLERY -->
+  <div class="about-gallery">
+    <div class="container">
+      <div class="about-gallery-header">
+        <h2>Gallery</h2>
+        <p class="muted">
+          A few snapshots from the workflow. Coffee, code, community - repeat.
+        </p>
+      </div>
+
+      <div class="about-tiles">
+        <div class="about-tile">
+          <img src="/img/instagram-barista.png" alt="Barista brewing coffee" />
+          <div class="tile-meta">
+            <span class="tile-tag">commit</span>
+            <span class="tile-text">feat: roast fresh batches daily</span>
+          </div>
+        </div>
+
+        <div class="about-tile">
+          <img src="/img/instagram-lounge.png" alt="People coding in a cozy cafe" />
+          <div class="tile-meta">
+            <span class="tile-tag">commit</span>
+            <span class="tile-text">feat: quiet corners for deep work</span>
+          </div>
+        </div>
+
+        <div class="about-tile">
+          <img src="/img/instagram-membership.png" alt="Coffee Overflow membership items" />
+          <div class="tile-meta">
+            <span class="tile-tag">commit</span>
+            <span class="tile-text">chore: ship perks to the team</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- TESTIMONIALS -->
+  <div class="about-testimonials">
+    <div class="container">
+      <h2 class="text-center mb-5">Trusted by Developers</h2>
+
+      <div class="about-testimonial-list">
+        {{#each testimonials}}
+          <div class="about-testimonial-item">
+            {{> testimonial
+              name=name
+              verified=verified
+              stars=stars
+              text=text
+              date=date
+            }}
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+
+
+  <!-- MEMBERSHIP -->
+  <div class="about-membership-section">
+    <div class="container">
+      <div class="about-membership-tagline">
+        <p>
+          Perks for people who drink coffee like they write code, seriously.
+        </p>
+      </div>
+
+      {{> membership }}
+    </div>
+  </div>
+
+
+  <!-- SOCIALS -->
+  <div class="about-socials">
+    <div class="about-socials-panel">
+      <h2>Stay Connected</h2>
+      <p>
+        We post coffee, code, new blends, and the occasional debugging victory.
+      </p>
+
+      <div class="about-socials-icons">
+        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+      </div>
+
+      <p class="about-socials-small muted">
+        No spam. Just beans, builds, and brew updates.
+      </p>
+    </div>
+  </div>
 
 </section>
