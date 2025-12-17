@@ -1,101 +1,119 @@
-<!-- Container -->
-<section class="container my-5" style="max-width: 700px;">
+<!-- PROFILE PAGE -->
+<section class="profile-page">
 
-  <!-- Title -->
-  <h1>My Profile</h1>
+  <div class="profile-wrapper">
 
-  <!-- Layout -->
-  <div class="row g-4 mt-4">
-
-    <!-- Details -->
-    <div class="col-12 col-md-6">
-
-      <!-- Personal -->
-      <h4>Personal Details</h4>
-
-      <!-- Profile Form -->
-      <form id="profileForm">
-
-        <!-- Email -->
-        <div class="mb-3">
-          <label for="profileEmail" class="form-label">Email</label>
-          <input
-            id="profileEmail"
-            type="email"
-            class="form-control"
-            disabled>
-        </div>
-
-        <!-- Address -->
-        <div class="mb-3">
-          <label for="profileAddress" class="form-label">Delivery Address</label>
-          <textarea
-            id="profileAddress"
-            name="address"
-            class="form-control"
-            rows="3"
-            required
-            minlength="10"
-            maxlength="200"></textarea>
-        </div>
-
-        <!-- Save -->
-        <button class="btn btn-primary w-100">
-          Save Details
-        </button>
-
-        <!-- Saved Message -->
-        <div id="profileSaved" class="alert alert-success d-none mt-3">
-          Profile updated successfully.
-        </div>
-
-      </form>
-    </div>
-
-    <!-- Security -->
-    <div class="col-12 col-md-6">
-
-      <!-- Password -->
-      <h4>Security</h4>
-
-      <!-- Password Form -->
-      <form id="passwordForm">
-
-        <!-- New Password -->
-        <div class="mb-3">
-          <label for="newPassword" class="form-label">New Password</label>
-          <input
-            id="newPassword"
-            name="newPassword"
-            type="password"
-            class="form-control"
-            required
-            minlength="6">
-        </div>
-
-        <!-- Change -->
-        <button class="btn btn-outline-secondary w-100">
-          Change Password
-        </button>
-
-        <!-- Saved Message -->
-        <div id="passwordSaved" class="alert alert-success d-none mt-3">
-          Password updated successfully.
-        </div>
-
-      </form>
-
-      <!-- Divider -->
-      <hr class="my-4">
-
-      <!-- Payment -->
-      <h5>Saved Payment</h5>
-      <p id="paymentInfo">
-        No payment details saved.
+    <!-- Header -->
+    <div class="profile-header">
+      <h1>My Profile</h1>
+      <p class="profile-subtext">
+        Manage your details, security, and saved info.
       </p>
+    </div>
+
+    <!-- Content -->
+    <div class="row g-4">
+
+      <!-- PERSONAL DETAILS -->
+      <div class="col-12 col-md-6">
+
+        <div class="profile-card">
+
+          <h4 class="profile-card-title">Personal Details</h4>
+
+          <form id="profileForm">
+
+            <!-- Email -->
+            <div class="mb-3">
+              <label for="profileEmail" class="form-label">Email</label>
+              <input
+                id="profileEmail"
+                type="email"
+                class="form-control"
+                disabled>
+            </div>
+
+            <!-- Address -->
+            <div class="mb-3">
+              <label for="profileAddress" class="form-label">Delivery Address</label>
+              <textarea
+                id="profileAddress"
+                name="address"
+                class="form-control"
+                rows="3"
+                required
+                minlength="10"
+                maxlength="200"
+                placeholder="Where should the coffee go?"></textarea>
+            </div>
+
+            <!-- Save -->
+            <button class="btn btn-primary w-100">
+              Save Details
+            </button>
+
+            <!-- Saved Message -->
+            <div id="profileSaved" class="alert alert-success d-none mt-3">
+              Profile updated successfully.
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+
+      <!-- SECURITY -->
+      <div class="col-12 col-md-6">
+
+        <div class="profile-card">
+
+          <h4 class="profile-card-title">Security</h4>
+
+          <form id="passwordForm">
+
+            <!-- New Password -->
+            <div class="mb-3">
+              <label for="newPassword" class="form-label">New Password</label>
+              <input
+                id="newPassword"
+                name="newPassword"
+                type="password"
+                class="form-control"
+                required
+                minlength="6"
+                placeholder="At least 6 characters">
+            </div>
+
+            <!-- Change -->
+            <button class="btn btn-outline-secondary w-100">
+              Change Password
+            </button>
+
+            <!-- Saved Message -->
+            <div id="passwordSaved" class="alert alert-success d-none mt-3">
+              Password updated successfully.
+            </div>
+
+          </form>
+
+          <!-- Divider -->
+          <hr class="profile-divider">
+
+          <!-- Payment -->
+          <h5 class="profile-subtitle">Saved Payment</h5>
+          <p id="paymentInfo" class="profile-muted">
+            No payment details saved.
+          </p>
+
+        </div>
+
+      </div>
 
     </div>
+
   </div>
+
 </section>
 
 <!-- Script -->
