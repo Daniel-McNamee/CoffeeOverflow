@@ -1,51 +1,63 @@
-<!-- Container -->
-<section class="container my-5">
+<!-- CART PAGE -->
+<section id="cartPage">
 
-  <!-- Title -->
-  <h1 class="mb-4">Your Cart</h1>
-
-  <!-- Empty Message -->
-  <div id="emptyCart" class="alert alert-info d-none">
-    Your cart is currently empty.
+  <!-- Header -->
+  <div class="cart-header text-center">
+    <h1>Your Cart</h1>
+    <p class="cart-subtitle">
+      Review your items before checkout ☕
+    </p>
   </div>
 
-  <!-- Cart Table -->
-  <div class="table-responsive">
-    <table class="table align-middle">
+  <!-- Container -->
+  <section class="container my-5">
 
-      <!-- Table Head -->
-      <thead>
-        <tr>
-          <th>Product</th>
-          <th style="width: 140px;">Quantity</th>
-          <th>Price</th>
-          <th>Total</th>
-          <th></th>
-        </tr>
-      </thead>
-
-      <!-- Table Body -->
-      <tbody id="cartItems">
-        <!-- Items Added Using JS -->
-      </tbody>
-
-    </table>
-  </div>
-
-  <!-- Cart Summary -->
-  <div class="d-flex justify-content-end mt-4">
-    <div class="text-end">
-
-      <!-- Total -->
-      <h4>Total: €<span id="cartTotal">0.00</span></h4>
-
-      <!-- Checkout Button -->
-      <a href="/checkout" class="btn btn-primary mt-3">
-        Proceed to Checkout
-      </a>
-
+    <!-- Empty Message -->
+    <div id="emptyCart" class="alert alert-info d-none">
+      Your cart is currently empty.
     </div>
-  </div>
+
+    <!-- Cart Table -->
+    <div class="table-responsive cart-table-wrapper">
+      <table class="table cart-table align-middle">
+
+        <!-- Table Head -->
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th style="width: 140px;">Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <!-- Table Body -->
+        <tbody id="cartItems">
+          <!-- Items injected via JS -->
+        </tbody>
+
+      </table>
+    </div>
+
+    <!-- Cart Summary -->
+    <div class="cart-summary">
+      <div class="text-end">
+        <h4 class="cart-total">
+          TOTAL: €<span id="cartTotal">0.00</span>
+        </h4>
+
+        <a href="/checkout" class="btn btn-warning btn-lg mt-3">
+          Proceed to Checkout
+        </a>
+
+        <p class="cart-microcopy mt-2">
+          Secure checkout · Fast delivery · No nonsense
+        </p>
+      </div>
+    </div>
+
+  </section>
 
 </section>
 
