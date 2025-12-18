@@ -1,0 +1,113 @@
+/* ---------------- CHECKOUT PAGE ---------------- */
+
+/* Background Effect */
+body {
+  min-height: 100vh;
+  background-color: #0f1010;
+  background-image:
+    radial-gradient(900px 500px at 20% 10%, rgba(255, 204, 0, 0.06), transparent 60%),
+    radial-gradient(900px 500px at 80% 30%, rgba(0, 255, 157, 0.06), transparent 55%),
+    radial-gradient(700px 500px at 50% 95%, rgba(255, 255, 255, 0.03), transparent 60%),
+    url("data:image/svg+xml,…");
+  background-attachment: fixed;
+}
+
+.checkout-page {
+  padding: var(--space-8) var(--space-3);
+  display: flex;
+  justify-content: center;
+
+  background:
+    radial-gradient(900px 500px at 20% 10%, rgba(255, 204, 0, 0.06), transparent 60%),
+    radial-gradient(900px 500px at 80% 30%, rgba(0, 255, 157, 0.07), transparent 55%);
+}
+
+.checkout-card {
+  width: 100%;
+  max-width: 640px;
+  padding: var(--space-6);
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 255, 157, 0.16);
+
+  box-shadow:
+    0 0 24px rgba(0, 255, 157, 0.10),
+    inset 0 0 20px rgba(255, 204, 0, 0.05);
+}
+
+/* Header */
+.checkout-header {
+  text-align: center;
+  margin-bottom: var(--space-5);
+}
+
+.checkout-subtitle {
+  margin-top: var(--space-2);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Sections */
+.checkout-section {
+  margin-bottom: var(--space-5);
+}
+
+.checkout-section h4 {
+  margin-bottom: 0.25rem;
+}
+
+.checkout-hint {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 1rem;
+}
+
+/* Inputs */
+.checkout-card .form-control {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.checkout-card .form-control:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 0.15rem rgba(0, 255, 157, 0.25);
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.form-text {
+  font-size: 0.8rem;
+  margin-top: 0.35rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Submit */
+.checkout-submit {
+  width: 100%;
+  margin-top: var(--space-4);
+  padding: 0.9rem;
+
+  background: #ffcc00;
+  color: #111;
+  border: none;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.checkout-submit:hover {
+  transform: scale(1.04);
+  box-shadow:
+    0 0 18px rgba(255, 204, 0, 0.8),
+    0 0 30px rgba(255, 204, 0, 0.4);
+}
+
+/* Success */
+.checkout-success {
+  text-align: center;
+  margin-top: var(--space-5);
+  color: var(--color-primary);
+}
