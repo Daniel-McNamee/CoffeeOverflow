@@ -86,6 +86,10 @@ app.get("/", (req, res) => {
     res.render("index", {
         isHome: true,
 
+        title: "Coffee Overflow | Coffee for Developers",
+        metaDescription: "Coffee Overflow is a developer-focused coffee brand and café built around community, collaboration and great coffee.",
+        metaKeywords: "coffee for developers, coding cafe, coffee overflow, programmer coffee, developer community",
+
         bestSellerSlides2,
         bestSellerSlides3,
         bestSellerSlides4,
@@ -104,72 +108,119 @@ app.get("/", (req, res) => {
 
 app.get("/shop", (req, res) => {
     res.render("shop", {
+        isShop: true,
         products,
-        isShop: true
+
+        title: "Shop Coffee | Coffee Overflow",
+        metaDescription: "Browse developer-inspired coffee blends, seasonal specials and accessories at Coffee Overflow.",
+        metaKeywords: "coffee shop, buy coffee online, developer coffee, coffee blends, coffee overflow shop"
     });
 });
-
 
 app.get("/product/:id", (req, res) => {
     const product = products.find(p => p.id == req.params.id);
     if (!product) return res.redirect("/shop");
-    res.render("product", { product });
+
+    res.render("product", {
+        product,
+
+        title: `${product.name} | Coffee Overflow`,
+        metaDescription: `Discover ${product.name}, a ${product.roast.toLowerCase()} roast with ${product.taste.toLowerCase()} notes, crafted for developers.`,
+        metaKeywords: `${product.name}, ${product.roast} coffee, developer coffee, coffee overflow`
+    });
 });
 
 app.get("/membership", (req, res) => {
     res.render("membership", {
         isMembership: true,
+
+        title: "Membership | Coffee Overflow",
+        metaDescription: "Join the Coffee Overflow membership to unlock exclusive perks, discounts and community benefits.",
+        metaKeywords: "coffee overflow, membership, coffee subscription, developer cafe membership"
     });
 });
 
 app.get("/membership-checkout", (req, res) => {
     res.render("membership-checkout", {
         isMembershipCheckout: true,
+
+        title: "Membership Checkout | Coffee Overflow",
+        metaDescription: "Complete your Coffee Overflow membership signup and join our developer-focused coffee community.",
+        metaKeywords: "membership checkout, coffee overflow, subscription"
     });
 });
 
 app.get("/about", (req, res) => {
     res.render("about", {
         isAbout: true,
-        testimonials
+        testimonials,
+
+        title: "About Us | Coffee Overflow",
+        metaDescription: "Learn about Coffee Overflow, a developer-focused coffee brand and café built around community and collaboration.",
+        metaKeywords: "about, coffee overflow, developer cafe, coding cafe, coffee community"
     });
 });
 
 app.get("/contact", (req, res) => {
     res.render("contact", {
-        isContact: true
+        isContact: true,
+
+        title: "Contact | Coffee Overflow",
+        metaDescription: "Get in touch with Coffee Overflow. Find our café, send a message or reach out to our team.",
+        metaKeywords: "contact, coffee overflow, coffee, cafe, leitrim coffee shop"
     });
 });
 
 app.get("/login", (req, res) => {
     res.render("login", {
-        isLogin: true
+        isLogin: true,
+
+        title: "Login | Coffee Overflow",
+        metaDescription: "Log in to your Coffee Overflow account to manage orders, membership and profile details.",
+        metaKeywords: "coffee overflow, login, user login, account"
     });
 });
 
 app.get("/register", (req, res) => {
     res.render("register", {
-        isRegister: true
+        isRegister: true,
+
+        title: "Register | Coffee Overflow",
+        metaDescription: "Create a Coffee Overflow account to shop, join the community and manage your profile.",
+        metaKeywords: "register, coffee overflow, create account, community signup"
     });
 });
 
 app.get("/profile", (req, res) => {
     res.render("profile", {
-        isProfile: true
+        isProfile: true,
+
+        title: "My Profile | Coffee Overflow",
+        metaDescription: "Manage your Coffee Overflow profile, delivery details and saved payment information.",
+        metaKeywords: "user profile, coffee overflow, account settings, profile"
     });
 });
 
 app.get("/cart", (req, res) => {
     res.render("cart", {
-        isCart: true
+        isCart: true,
+
+        title: "Your Cart | Coffee Overflow",
+        metaDescription: "Review your Coffee Overflow cart, update quantities and proceed to checkout.",
+        metaKeywords: "shopping cart, coffee overflow, cart, checkout"
     });
 });
 
 app.get("/checkout", (req, res) => {
     res.render("checkout", {
-        isCheckout: true
+        isCheckout: true,
+
+        title: "Checkout | Coffee Overflow",
+        metaDescription: "Complete your Coffee Overflow purchase securely with our checkout process.",
+        metaKeywords: "coffee overflow, checkout, payment"
     });
 });
+
 
 
 // ------------ SERVER -----------
