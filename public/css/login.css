@@ -1,0 +1,87 @@
+/* ---------------- LOGIN PAGE ---------------- */
+
+/* Background Effect */
+body {
+  min-height: 100vh;
+  background-color: #0f1010;
+  background-image:
+    radial-gradient(900px 500px at 20% 10%, rgba(255, 204, 0, 0.06), transparent 60%),
+    radial-gradient(900px 500px at 80% 30%, rgba(0, 255, 157, 0.06), transparent 55%),
+    radial-gradient(700px 500px at 50% 95%, rgba(255, 255, 255, 0.03), transparent 60%),
+    url("data:image/svg+xml,…");
+  background-attachment: fixed;
+}
+
+
+.login-page {
+  min-height: calc(100vh - 120px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-6) var(--space-3);
+}
+
+.login-wrapper {
+  width: 100%;
+  max-width: 420px;
+}
+
+.login-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(0, 255, 157, 0.18);
+  border-radius: 20px;
+  padding: var(--space-6);
+  backdrop-filter: blur(12px);
+  box-shadow:
+    0 0 24px rgba(0, 255, 157, 0.10),
+    inset 0 0 18px rgba(255, 204, 0, 0.05);
+}
+
+/* Header */
+.login-header {
+  text-align: center;
+  margin-bottom: var(--space-4);
+}
+
+.login-header h1 {
+  margin-bottom: 0.5rem;
+}
+
+.login-subtext {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+}
+
+/* Button */
+.login-btn {
+  background-color: var(--color-primary);
+  border: none;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 16px rgba(0, 255, 157, 0.35);
+}
+
+/* Footer */
+.login-footer {
+  margin-top: var(--space-4);
+  text-align: center;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.login-footer a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-footer a:hover {
+  text-decoration: underline;
+}
