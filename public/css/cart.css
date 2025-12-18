@@ -1,0 +1,111 @@
+/* ---------------- CART PAGE ---------------- */
+
+/* PAGE BACKGROUND */
+body {
+  background-color: #0f1010;
+  background-image:
+    radial-gradient(900px 500px at 20% 10%, rgba(255, 204, 0, 0.06), transparent 60%),
+    radial-gradient(900px 500px at 80% 30%, rgba(0, 255, 157, 0.06), transparent 55%),
+    radial-gradient(700px 500px at 50% 95%, rgba(255, 255, 255, 0.03), transparent 60%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+}
+
+/* HEADER */
+.cart-header {
+  padding-top: 4rem;
+}
+
+.cart-header h1 {
+  font-size: 3rem;
+  letter-spacing: 0.08em;
+}
+
+.cart-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 0.75rem;
+}
+
+/* TABLE WRAPPER */
+.cart-table-wrapper {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 255, 157, 0.18);
+  box-shadow:
+    0 0 24px rgba(0, 255, 157, 0.12),
+    0 0 32px rgba(255, 204, 0, 0.06) inset;
+}
+
+/* TABLE */
+.cart-table {
+  margin-bottom: 0;
+  color: #fff;
+}
+
+.cart-table thead th {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  font-weight: 600;
+}
+
+.cart-table tbody tr {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cart-table td {
+  vertical-align: middle;
+}
+
+/* Quantity input */
+.cart-table input[type="number"] {
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.25rem 0.5rem;
+}
+
+/* REMOVE BUTTON */
+.cart-table .btn-danger {
+  background: transparent;
+  border: 1px solid #ff4d4d;
+  color: #ff4d4d;
+}
+
+.cart-table .btn-danger:hover {
+  background: #ff4d4d;
+  color: #000;
+}
+
+/* SUMMARY */
+.cart-summary {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cart-total {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.cart-total span {
+  color: var(--color-primary);
+}
+
+/* MICROCOPY */
+.cart-microcopy {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .cart-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .cart-summary {
+    justify-content: center;
+    text-align: center;
+  }
+}
