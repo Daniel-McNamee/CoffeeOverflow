@@ -1,0 +1,364 @@
+/* ---------------- ABOUT PAGE ---------------- */
+@import "./components/testimonials.css";
+@import "./components/membership.css";
+
+/* Cozy background texture */
+#aboutTexture {
+  background-color: #0f1010;
+  background-image:
+    radial-gradient(1200px 600px at 20% 10%, rgba(255, 204, 0, 0.06), transparent 60%),
+    radial-gradient(900px 500px at 80% 30%, rgba(0, 255, 157, 0.07), transparent 55%),
+    radial-gradient(700px 500px at 50% 95%, rgba(255, 255, 255, 0.03), transparent 60%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+}
+
+/* Shared warmer glass look */
+:root {
+  --glass: rgba(255, 255, 255, 0.04);
+  --glass2: rgba(255, 255, 255, 0.03);
+  --border: rgba(0, 255, 157, 0.16);
+  --warm: rgba(255, 204, 0, 0.10);
+  --warm2: rgba(255, 204, 0, 0.06);
+}
+
+.about-page {
+  padding: 0;
+}
+
+/* ---------------- INTRO PANEL ---------------- */
+.about-intro {
+  padding: var(--space-8) var(--space-3) var(--space-6);
+  display: flex;
+  justify-content: center;
+}
+
+.about-intro-panel {
+  width: min(980px, 100%);
+  padding: var(--space-6);
+  border-radius: 22px;
+  background: var(--glass);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  box-shadow:
+    0 0 22px rgba(0, 255, 157, 0.10),
+    0 0 30px rgba(255, 204, 0, 0.06) inset;
+}
+
+.about-summary-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: var(--space-3);
+}
+
+.about-points {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(0, 255, 157, 0.08);
+  border: 1px solid rgba(0, 255, 157, 0.18);
+  color: var(--color-text);
+}
+
+.about-punchline {
+  margin-top: var(--space-3);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* ---------------- HIGHLIGHT PANEL ---------------- */
+.about-highlight-panel {
+  padding: var(--space-6) var(--space-3);
+}
+
+.about-highlight-panel-inner {
+  width: min(1050px, 100%);
+  margin: 0 auto;
+  padding: var(--space-5);
+  border-radius: 18px;
+  background:
+    linear-gradient(90deg, rgba(255, 204, 0, 0.10), rgba(0, 255, 157, 0.06));
+  border: 1px solid rgba(255, 204, 0, 0.18);
+  box-shadow: 0 0 18px rgba(255, 204, 0, 0.10);
+}
+
+.about-highlight-panel-inner h3 {
+  margin-bottom: 0.75rem;
+}
+
+.muted {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* ---------------- CAFE ---------------- */
+.about-cafe {
+  padding: var(--space-8) var(--space-3);
+}
+
+.about-cafe-image {
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow:
+    0 0 30px rgba(0, 255, 157, 0.18),
+    0 18px 45px rgba(0, 0, 0, 0.65);
+}
+
+.about-cafe-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: saturate(1.05) contrast(1.05);
+}
+
+.about-cafe-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(900px 500px at 30% 20%, rgba(255, 204, 0, 0.12), transparent 60%),
+    linear-gradient(to top, rgba(0,0,0,0.45), transparent 45%);
+  pointer-events: none;
+}
+
+.about-cafe-image-tag {
+  position: absolute;
+  left: 18px;
+  bottom: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(15, 16, 16, 0.65);
+  border: 1px solid rgba(255, 204, 0, 0.20);
+  backdrop-filter: blur(10px);
+  font-weight: 600;
+}
+
+.about-cafe-image-tag .dot {
+  opacity: 0.7;
+}
+
+.about-cafe-card {
+  border-radius: 20px;
+  background: var(--glass2);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+  padding: var(--space-6);
+  box-shadow:
+    0 0 22px rgba(0, 255, 157, 0.10);
+  position: relative;
+  margin-left: -24px;
+}
+
+@media (max-width: 991px) {
+  .about-cafe-card {
+    margin-left: 0;
+  }
+}
+
+.about-highlight {
+  color: rgba(255, 204, 0, 0.95);
+  font-weight: 600;
+}
+
+.about-highlight2 {
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-top: var(--space-3);
+}
+
+/* ---------------- GALLERY / TILES ---------------- */
+.about-gallery {
+  padding: var(--space-7) var(--space-3);
+}
+
+.about-gallery-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: var(--space-4);
+}
+
+.about-tiles {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-3);
+}
+
+.about-tile {
+  grid-column: span 4;
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.55);
+  position: relative;
+  transform: translateY(0);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.about-tile:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 0 18px rgba(0, 255, 157, 0.18),
+    0 18px 40px rgba(0,0,0,0.65);
+}
+
+.about-tile img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+.tile-meta {
+  padding: 1rem 1.1rem;
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.tile-tag {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.85rem;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 255, 157, 0.25);
+  background: rgba(0, 255, 157, 0.08);
+}
+
+.tile-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  opacity: 0.92;
+}
+
+@media (max-width: 992px) {
+  .about-tile { grid-column: span 6; }
+}
+@media (max-width: 576px) {
+  .about-tile { grid-column: span 12; }
+  .about-tile img { height: 210px; }
+}
+
+/* ---------------- TESTIMONIALS ---------------- */
+.about-testimonials {
+  padding: var(--space-8) var(--space-3);
+}
+
+.about-testimonial-list {
+  max-width: 920px;
+  margin: 0 auto;
+  display: grid;
+  gap: var(--space-4);
+}
+
+/* Stagger each item */
+.about-testimonial-item:nth-child(odd) {
+  justify-self: start;
+  transform: translateX(-18px);
+}
+
+.about-testimonial-item:nth-child(even) {
+  justify-self: end;
+  transform: translateX(18px);
+}
+
+@media (max-width: 768px) {
+  .about-testimonial-item:nth-child(odd),
+  .about-testimonial-item:nth-child(even) {
+    justify-self: center;
+    transform: none;
+  }
+}
+
+.testimonial-card {
+  width: min(680px, 100%);
+  border-radius: 16px;
+  background-color: #2a2a2a;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.55);
+}
+
+.testimonial-card .testimonial-text {
+  min-height: 56px;
+}
+
+/* ---------------- MEMBERSHIP ---------------- */
+.about-membership-section {
+  padding: var(--space-7) var(--space-3);
+  background:
+    radial-gradient(900px 500px at 50% 20%, rgba(255, 204, 0, 0.08), transparent 60%),
+    radial-gradient(900px 500px at 50% 80%, rgba(0, 255, 157, 0.06), transparent 60%);
+}
+
+.about-membership-tagline {
+  text-align: center;
+  margin-bottom: var(--space-4);
+}
+
+.about-membership-tagline p {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 600;
+}
+
+/* ---------------- SOCIALS ---------------- */
+.about-socials {
+  padding: var(--space-7) var(--space-3) var(--space-8);
+  display: flex;
+  justify-content: center;
+}
+
+.about-socials-panel {
+  width: min(860px, 100%);
+  text-align: center;
+  padding: var(--space-6);
+  border-radius: 22px;
+  background: var(--glass);
+  border: 1px solid rgba(255, 204, 0, 0.16);
+  backdrop-filter: blur(10px);
+  box-shadow:
+    0 0 22px rgba(255, 204, 0, 0.10),
+    inset 0 0 20px rgba(0, 255, 157, 0.05);
+}
+
+.about-socials-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2.25rem;
+  margin-top: var(--space-4);
+}
+
+.about-socials-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  border: 1px solid rgba(0, 255, 157, 0.18);
+  background: rgba(0, 255, 157, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.about-socials-icons a:hover {
+  transform: translateY(-4px) scale(1.06);
+  box-shadow:
+    0 0 16px rgba(0, 255, 157, 0.22),
+    0 0 24px rgba(255, 204, 0, 0.10);
+}
+
+.about-socials-icons i {
+  font-size: 1.8rem;
+  color: var(--color-primary);
+}
+
+.about-socials-small {
+  margin-top: var(--space-4);
+}
