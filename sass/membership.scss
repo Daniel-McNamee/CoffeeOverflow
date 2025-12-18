@@ -1,0 +1,124 @@
+/* ---------------- MEMBERSHIP PAGE ---------------- */
+@import "./base.css";
+
+/* Cozy background texture */
+#membershipTexture {
+  background-color: #0f1010;
+  background-image:
+    radial-gradient(900px 500px at 20% 15%, rgba(0, 255, 157, 0.08), transparent 60%),
+    radial-gradient(900px 500px at 80% 85%, rgba(255, 204, 0, 0.08), transparent 60%);
+  background-attachment: fixed;
+}
+
+.membership-page {
+  padding-bottom: var(--space-8);
+}
+
+/* ---------------- HEADER ---------------- */
+.membership-header {
+  padding: var(--space-8) var(--space-3) var(--space-6);
+  display: flex;
+  justify-content: center;
+
+  &-card {
+    width: min(900px, 100%);
+    padding: var(--space-6);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(0, 255, 157, 0.18);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 26px rgba(0, 255, 157, 0.12);
+    text-align: center;
+  }
+}
+
+.membership-tagline {
+  font-size: 1.15rem;
+  margin: 1rem 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ---------------- BENEFITS ---------------- */
+.membership-benefits {
+  padding: var(--space-7) var(--space-3);
+  max-width: 760px;
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  &-list {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+
+      &::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--color-primary);
+      }
+    }
+  }
+}
+
+/* ---------------- CTA ---------------- */
+.membership-cta {
+  padding: var(--space-7) var(--space-3);
+  display: flex;
+  justify-content: center;
+
+  &-card {
+    width: min(680px, 100%);
+    padding: var(--space-6);
+    border-radius: 24px;
+    text-align: center;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 204, 0, 0.12),
+      rgba(0, 255, 157, 0.10)
+    );
+    border: 1px solid rgba(255, 204, 0, 0.22);
+    box-shadow:
+      0 0 30px rgba(255, 204, 0, 0.18),
+      0 0 30px rgba(0, 255, 157, 0.18);
+  }
+}
+
+.membership-period {
+  font-size: 1rem;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.membership-cta-text {
+  margin: 1rem 0 1.5rem;
+  font-weight: 600;
+}
+
+.membership-cta-button {
+  background-color: #ffcc00;
+  color: #111;
+  font-size: 1.1rem;
+  font-weight: 800;
+  padding: 0.75rem 2.25rem;
+  border-radius: 10px;
+  border: none;
+  letter-spacing: 0.05em;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 0 24px rgba(255, 204, 0, 0.6);
+  }
+}
+
+.membership-small {
+  margin-top: 1.2rem;
+  font-size: 0.9rem;
+}
