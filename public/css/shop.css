@@ -1,0 +1,11 @@
+/* Background Effect */
+body {
+  min-height: 100vh;
+  background-color: #0f1010;
+  background-image:
+    radial-gradient(900px 500px at 20% 10%, rgba(255, 204, 0, 0.06), transparent 60%),
+    radial-gradient(900px 500px at 80% 30%, rgba(0, 255, 157, 0.06), transparent 55%),
+    radial-gradient(700px 500px at 50% 95%, rgba(255, 255, 255, 0.03), transparent 60%),
+    url("data:image/svg+xml,…");
+  background-attachment: fixed;
+}
